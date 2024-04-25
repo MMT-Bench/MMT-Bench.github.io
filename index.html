@@ -1855,6 +1855,20 @@
             Based on the task map, we find that LVLMs obtain a more consistent performance ranking on tasks closer to each other.
             Our task map can also be used to discover Out-of-Domain (OoD) tasks and In-domain tasks.
           </p>
+          <p>
+            The OoD tasks mean tasks that the current model struggles to handle. Discovering OoD tasks can provide insights for future evaluation efforts and the development of stronger LVLMs. Since 
+            model performance on different tasks is related to task distances, we hypothesize that OoD tasks would be grouped in local regions on the task map. Therefore, we conduct 
+            hierarchical clustering on the task map to find OoD tasks. We use two criteria to identify clusters containing OoD tasks. First, LVLMs would achieve poor
+            performance on OoD tasks. Second, the performance of LVLMs on OoD tasks would be inconsistent with the overall multimodal score in the leaderboard because LVLMs with competitive overall scores would even fail to solve OoD tasks.
+            In results, we can see that clusters 8, 9, and 11 achieve low multimodal accuracy and ranking correlation. From these clusters, we find that current multimodal large models lack the ability to perform fine-grained
+            visual cognition and understanding of positional and spatial relationships, such as localization and detection tasks. Moreover,
+            they exhibit poor performance in tasks related to new data structures or types of images, showing a lack of proficiency in handling tasks related to GUI and special data structures like tables.
+          </p>
+          <p>
+            In-domain tasks are tasks that most current multimodal large models can handle correctly. Discovering in-domain tasks guides the commercial application of LVLMs in specific scenarios. Different from OoD tasks, we identify in-domain tasks by looking for clusters with large ranking correlation and high multimodal accuracy. 
+            Specifically, we can see that clusters 2, 3, and 10 achieve relatively high accuracy and large ranking correlation. We observe that current multimodal large models possess strong high-level visual comprehension capabilities, enabling them to effectively handle visual recognition tasks, even when dealing with specialized images such as 
+            medical images. Moreover, they benefit from the powerful LLMs to accurately describe images.
+          </p>
         </div>
         <div class="columns is-centered m-6">
           <div class="column is-full has-text-centered content">
@@ -1874,6 +1888,7 @@
                 </div>
              
             </div>
+            
           </div>
         </div>
        
