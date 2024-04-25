@@ -1,4 +1,4 @@
-# MMMU
+# MMT-Bench
 Homepage of MMT-Bench, A Multimodal MultiTask Benchmark for Comprehensive Evaluation of Large Vision-Language Models.
 
  This website is adapted from [MMMU](https://mmmu-benchmark.github.io/), [Nerfies](https://nerfies.github.io) and [MathVista](https://mathvista.github.io/).
